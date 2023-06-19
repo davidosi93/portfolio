@@ -1,0 +1,53 @@
+.about-me {
+    position: absolute;
+    left: 100px;
+    top: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+
+    h2 {
+        color: white;
+        font-weight: 700;
+        font-size: 90px;
+        margin-top: 5%;
+        margin-bottom: 25px;
+    }
+}
+
+.about-me-left-area {
+    width: 471px;
+}
+
+span {
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+.about-me-textarea {
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.about-me-textarea-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding-left: 30px;
+
+    p {
+        flex-basis: 80%;
+    }
+}
+
+.picture {
+    background: url('/assets/img/image-background-shadow.png');
+    background-position: center;
+    background-size: cover;
+}
