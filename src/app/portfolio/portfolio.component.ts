@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class PortfolioComponent {
 
+  constructor() { }
+
+  ngOnInit(): void {
+    Aos.init();
+  }
 }

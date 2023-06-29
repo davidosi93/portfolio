@@ -1,0 +1,26 @@
+<div id="contact" class="contact">
+    <div class="contact-header">
+        <h2>Contact</h2>
+        <div class="border"></div>
+    </div>
+</div>
+
+<div class="contact-content">
+    <div class="contact-left-side">
+        <div class="border-2"></div>
+        <h3>Got a problem to solve?</h3>
+        <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
+            projects with my work.</p>
+        <p>Need a Frontend developer? <b>Contact me!</b></p>
+    </div>
+
+    <form (submit)="sendMail()" ngNativeValidate #myForm class="contact-right-side">
+        <input required type="name" placeholder="Your name" #nameField>
+        <input required type="email" placeholder="Your email" #emailField>
+        <textarea required type="message" placeholder="Your message" #messageField></textarea>
+        <button #sendButton>Send message :)</button>
+    </form>
+
+    <div class="purple-shadow"></div>
+    <a href="#" class="go-up-btn"></a>
+</div>

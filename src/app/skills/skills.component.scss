@@ -1,21 +1,21 @@
 .skills {
-    background: url('/assets/img/floating-background.png') no-repeat;
+    background: url(/assets/img/floating-background.png) no-repeat;
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    position: absolute;
-    top: 165%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 96px;
-    padding-top: 250px;
+    padding: 25% 10% 0% 10%;
+    position: relative;
+    top: -100px;
 }
 
 .skills-logos-row {
     display: flex;
     width: 650px;
     justify-content: space-between;
+    z-index: 3;
 }
 
 .skills-logos {
@@ -78,7 +78,6 @@
 }
 
 .skills-header {
-    width: 900px;
     color: white;
 
     h2 {
@@ -90,12 +89,16 @@
 
 .skills-headline {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
 
-    img {
-        width: 500px;
-    }
+.border {
+    border: 2.5px solid #1CE6B6;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: absolute;
+    right: 0;
+    width: 15%;
 }
 
 .skills-text-btn {

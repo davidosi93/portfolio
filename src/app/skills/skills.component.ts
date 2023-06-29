@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-skills',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class SkillsComponent {
 
+  constructor() { }
+
+  ngOnInit(): void {
+    Aos.init();
+  }
 }
