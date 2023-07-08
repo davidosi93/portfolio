@@ -3,7 +3,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
-    letter-spacing: 0;
+    position: relative;
+
+    @media (max-width: 1180px) {
+        padding: 0 5%;
+        flex-direction: column-reverse;
+    }
 
     h2 {
         color: white;
@@ -11,13 +16,26 @@
         font-size: 90px;
         margin-top: 5%;
         margin-bottom: 25px;
+
+        @media (max-width: 1250px) {
+            font-size: 6vw;
+        }
+
+        @media (max-width: 1180px) {
+            font-size: 11vw;
+        }
     }
 }
 
 .about-me-left-area {
     width: 471px;
-    padding-top: 120px;
-}
+
+    @media (max-width: 1180px) {
+        width: 100vw;
+        padding-top: 90px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }}
 
 span {
     color: white;
@@ -50,4 +68,31 @@ li {
     background-position: center;
     background-size: cover;
     margin-top: 120px;
+
+    img {
+        @media (max-width: 600px) {
+            width: 80vw;
+            height: auto;
+        }
+    }
+}
+
+.floating-background {
+    z-index: -4;
+    position: absolute;
+    width: 100%;
+    height: 65vh;
+    left: 0;
+    right: 0;
+    top: 600px;
+
+    @media (max-width: 800px) {
+        height: 30vh;
+        top: 45%;
+    }
+
+    @media (max-width: 430px) {
+        height: 30vh;
+        top: 35%;
+    }
 }

@@ -2,24 +2,42 @@
     position: absolute;
     padding-top: 8%;
     width: 100vw;
+
+    @media (max-width: 1180px) {
+        padding-top: 20%;
+        position: unset;
+        width: unset;
+    }
+
+    @media (max-width: 700px) {
+        padding-top: 30%;
+    }
 }
 
 .border {
     border: 2.5px solid #4B47FF;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    position: relative;
-    top: 75px;
+    position: absolute;
     left: 0;
     width: 100px;
+
+    @media (max-width: 1180px) {
+        width: 3vw;
+    }
 }
 
 .header {
+    position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     padding-left: 10%;
+
+    @media (max-width: 1180px) {
+        padding: 0 5%;
+    }
 
 
     h2 {
@@ -27,6 +45,10 @@
         font-size: 90px;
         color: white;
         margin: 0;
+
+        @media (max-width: 1180px) {
+            font-size: 11vw;
+        }
     }
 
     p {
@@ -36,33 +58,43 @@
     }
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
 .green-shadow-portfolio {
     position: absolute;
-    height: 608px;
-    left: 80%;
-    top: 2400px;
+    right: 0;
 }
 
 .blue-shadow-portfolio {
     position: absolute;
-    height: 608px;
-    right: 80%;
+    left: 0;
     top: 3500px;
+
+    @media (max-width: 400px) {
+        height: 75vh;
+    }
 }
 
 .projects {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
     padding: 30% 10% 0 10%;
+
+    @media (max-width: 1180px) {
+        padding: 0 5%;
+    }
 }
 
 .project {
-    position: relative;
-    width: 601px;
-    height: 600px;
+    width: 600px;
+    max-height: 600px;
+    aspect-ratio: 1/1;
     background: #141D2F;
     border: 1px solid #00BEE8;
     border-radius: 15px;
@@ -70,8 +102,9 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-top: 17px;
-    margin-bottom: 17px;
+    margin: 17px;
+
+    @media (max-width: 1180px) {}
 
     &:hover .hover-content {
         display: block;
@@ -144,10 +177,12 @@
 
 .project-image {
     background: url('/assets/img/portfolio/pollo_locco.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 100%;
     height: 100%;
     transition: all 225ms ease-in-out;
-    position: absolute;
 }
 
 .hover-content {
@@ -169,6 +204,10 @@
     width: 100%;
     height: 250px;
 
+    @media (max-width: 1180px) {
+        height: 40%;
+    }
+
     a {
         text-decoration: none;
         color: white;
@@ -181,6 +220,12 @@
         align-items: center;
         font-weight: 400;
         font-size: 23px;
+
+        @media (max-width: 450px) {
+            width: 114px;
+            height: 49px;
+            font-size: unset;
+        }
     }
 }
 
@@ -214,27 +259,49 @@
     background-color: white;
     border-radius: 15px;
 
+    @media (max-width: 450px) {
+        height: 60%;
+        justify-content: center;
+    }
+
     h3 {
         font-weight: 700;
         font-size: 32px;
         color: #4B47FF;
+
+        @media (max-width: 450px) {
+            font-size: 23px;
+            margin: 0;
+        }
     }
 
     span {
         font-weight: 400;
         font-size: 23px;
         text-align: center;
+
+        @media (max-width: 450px) {
+            font-size: unset;
+        }
     }
 
     p {
         font-weight: 400;
         font-size: 23px;
         color: #00BEE8;
+
+        @media (max-width: 450px) {
+            font-size: unset;
+            margin: 0;
+        }
     }
 }
 
 .project-image-join {
     background: url('/assets/img/portfolio/Join.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 100%;
     height: 100%;
     transition: all 225ms ease-in-out;
@@ -243,6 +310,9 @@
 
 .project-image-pokedex {
     background: url('/assets/img/portfolio/pokedex.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 100%;
     height: 100%;
     transition: all 225ms ease-in-out;
@@ -251,6 +321,9 @@
 
 .project-image-crm {
     background: url('/assets/img/portfolio/simple_crm.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 100%;
     height: 100%;
     transition: all 225ms ease-in-out;

@@ -4,6 +4,10 @@
     justify-content: center;
     padding: 0 10%;
     position: relative;
+
+    @media (max-width: 1180px) {
+        padding: 0 5%;
+    }
 }
 
 .contact-header {
@@ -14,6 +18,14 @@
         font-size: 90px;
         font-weight: 700;
         color: white;
+
+        @media (max-width: 1180px) {
+            font-size: 65px;
+        }
+
+        @media (max-width: 430px) {
+            font-size: 45px;
+        }
     }
 }
 
@@ -24,6 +36,10 @@
     position: absolute;
     right: 0;
     width: 30%;
+
+    @media (max-width: 430px) {
+        width: 20%;
+    }
 }
 
 .contact-content {
@@ -32,21 +48,50 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1180px) {
+        height: unset;
+        padding: 0 5%;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10%;
+    }
+
+    @media (max-width: 800px) {
+        padding-bottom: 15%;
+    }
+
+    @media (max-width: 450px) {
+        padding-bottom: 30%;
+    }
 }
 
 .contact-left-side {
     width: 40%;
+
+    @media (max-width: 1180px) {
+        width: unset;
+    }
 
     h3 {
         font-size: 32px;
         font-weight: 700;
         color: white;
         margin: 0;
+
+        @media (max-width: 400px) {
+            font-size: 23px;
+        }
     }
 
     p {
         color: white;
     }
+}
+
+.contact-left-side-header {
+    display: flex;
+    align-items: center;
 }
 
 .border-2 {
@@ -56,7 +101,10 @@
     width: 8%;
     position: absolute;
     left: 0;
-    top: 3.5%;
+
+    @media (max-width: 1180px) {
+        width: 3%;
+    }
 }
 
 .contact-right-side {
@@ -66,6 +114,9 @@
     align-items: center;
     gap: 35px;
 
+    @media (max-width: 1180px) {
+        width: 100%;
+    }
     input {
         width: 100%;
         border: 1px solid #4B47FF;
@@ -125,6 +176,12 @@
         cursor: pointer;
         transition: all 225ms ease-in-out;
 
+        @media (max-width: 1180px) {
+            width: 186px;
+            height: 49px;
+            font-size: 16px;
+        }
+
         &:hover {
             background-color: #4B47FF;
             transform: scale(1.2);
@@ -143,6 +200,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+
+    @media (max-width: 1180px) {
+        bottom: 0;
+        top: unset;
+    }
 }
 
 .go-up-btn {

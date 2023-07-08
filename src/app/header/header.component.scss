@@ -1,13 +1,40 @@
 .purple-image {
     position: absolute;
-    left: -260px;
-    top: 100px;
+    left: 0;
+
+    @media (max-width: 1180px) {
+        max-width: 55%;
+        height: auto;
+        top: 10%;
+    }
+
+    @media (max-width: 480px) {
+        top: 10%;
+    }
+
+    @media (max-width: 350px) {
+        top: 16%;
+    }
 }
 
 .green-image {
     position: absolute;
-    right: -450px;
+    right: 0;
     top: 25px;
+
+    @media (max-width: 1180px) {
+        max-width: 50%;
+        height: auto;
+        top: 12%;
+    }
+
+    @media (max-width: 600px) {
+        top: 18%;
+    }
+
+    @media (max-width: 480px) {
+        top: 20%;
+    }
 }
 
 .header {
@@ -16,37 +43,63 @@
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
     margin-top: 100px;
+
+    @media (max-width: 1180px) {
+        align-items: center;
+        height: 400px;
+    }
 }
 
 .headline {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     z-index: 2;
-
-    span {
-        transform: rotate(-90deg);
-        font-weight: 400;
-        font-size: 5rem;
-    }
 
     h1 {
         font-weight: 700;
-        font-size: 6.5rem;
+        font-size: 6vw;
         margin: 0;
         box-sizing: border-box;
         padding-top: 2vh;
+
+        @media (max-width: 1180px) {
+            font-size: 9vw;
+            padding-top: 0;
+            line-height: 125%;
+        }
     }
 
-    h2 {
+    p {
         font-weight: 400;
-        font-size: 3.5rem;
+        font-size: 3.5vw;
         color: #4B47FF;
         margin: 0;
         padding-bottom: 4vh;
+
+        @media (max-width: 1180px) {
+            font-size: 6vw;
+            padding-bottom: 0;
+            line-height: 140%;
+        }
+    }
+}
+
+.text-part {
+    display: flex;
+    align-items: center;
+}
+
+.i-am {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: 400;
+    font-size: 5vw;
+
+    @media (max-width: 1180px) {
+        font-size: 7vw;
     }
 }
 
@@ -67,5 +120,12 @@ button {
         background-color: #4B47FF;
         transform: scale(1.2);
         transition: all 225ms ease-in-out;
+    }
+
+    @media (max-width: 1180px) {
+        margin-top: 5vh;
+        width: 133px;
+        height: 49px;
+        font-size: 18px;
     }
 }

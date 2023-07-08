@@ -1,7 +1,4 @@
 .skills {
-    background: url(/assets/img/floating-background.png) no-repeat;
-    background-size: cover;
-    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -9,6 +6,14 @@
     padding: 25% 10% 0% 10%;
     position: relative;
     top: -100px;
+
+    @media (max-width: 1180px) {
+        padding: 0 5%;
+        flex-direction: column-reverse;
+        top: 10vh;
+        align-items: flex-start;
+        height: unset;
+    }
 }
 
 .skills-logos-row {
@@ -16,6 +21,10 @@
     width: 650px;
     justify-content: space-between;
     z-index: 3;
+
+    @media (max-width: 1180px) {
+        width: 100%;
+    }
 }
 
 .skills-logos {
@@ -31,9 +40,18 @@
     margin-top: 30px;
     margin-bottom: 30px;
 
+    @media (max-width: 1180px) {
+        margin-bottom: unset;
+    }
+
     img {
         &:hover {
             animation: bounce 1.5s ease 0s 1 normal forwards;
+        }
+
+        @media (max-width: 750px) {
+            width: 40px;
+            height: 40px;
         }
     }
 
@@ -41,6 +59,10 @@
         font-weight: 700;
         font-size: 16px;
         color: white;
+
+        @media (max-width: 360px) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -84,6 +106,10 @@
         font-size: 90px;
         font-weight: 700;
         margin: 0;
+
+        @media (max-width: 880px) {
+            font-size: 10vw;
+        }
     }
 }
 
@@ -99,12 +125,23 @@
     position: absolute;
     right: 0;
     width: 15%;
+
+    @media (max-width: 1180px) {
+        width: 45vw;
+    }
 }
 
 .skills-text-btn {
-
     p {
         width: 460px;
+
+        @media (max-width: 1180px) {
+            width: unset;
+        }
+    }
+
+    a {
+        text-decoration: none;
     }
 
     button {
@@ -119,11 +156,49 @@
         color: white;
         cursor: pointer;
         transition: all 225ms ease-in-out;
+        display: block;
+
+        @media (max-width: 1180px) {
+            display: none;
+
+        }
 
         &:hover {
             background-color: #4B47FF;
             transform: scale(1.2);
             transition: all 225ms ease-in-out;
         }
+    }
+}
+
+.mobile-button {
+    display: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    margin-top: 4%;
+
+    button {
+        background-color: #00BEE8;
+        border: none;
+        width: 158px;
+        height: 49px;
+        font-size: 18px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+        transition: all 225ms ease-in-out;
+
+        &:hover {
+            background-color: #4B47FF;
+            transform: scale(1.2);
+            transition: all 225ms ease-in-out;
+        }
+    }
+
+    @media (max-width: 1180px) {
+        display: block;
     }
 }
