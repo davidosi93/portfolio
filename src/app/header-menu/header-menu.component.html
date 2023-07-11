@@ -5,5 +5,16 @@
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
     </menu>
-    <img class="burger-menu" src="/assets/img/burger_menu.png">
+    <img (click)="toggleMenu()" class="burger-menu" src="/assets/img/burger_menu.png">
+</div>
+
+<div class="header-menu-mobile-top">
+    <div class="header-menu-mobile" *ngIf="isMenuOpen" [@slideInRightOnEnter] [@slideOutRightOnLeave]>
+        <div class="menu-links">
+            <a href="#about-me">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
 </div>

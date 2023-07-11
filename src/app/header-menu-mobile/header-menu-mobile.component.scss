@@ -1,0 +1,66 @@
+.header-menu-mobile {
+    z-index: 222;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(9 28 68 / 70%);
+    position: fixed;
+    top: 0;
+    right: -1180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animationSlideRight {
+    animation: slideRight 1s ease 0s 1 normal forwards;
+}
+
+@keyframes slideRight {
+	0% {
+		opacity: 0;
+		transform: translateX(-1180px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.header-menu {
+    padding: 0 5%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 32px;
+        font-weight: 700;
+    }
+}
+
+.menu-links {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 23px;
+    }
+}
+
+.burger-menu {
+    cursor: pointer;
+}

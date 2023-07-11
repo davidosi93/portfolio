@@ -13,6 +13,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderMenuMobileComponent } from './header-menu-mobile/header-menu-mobile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -24,14 +27,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SkillsComponent,
     PortfolioComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderMenuMobileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

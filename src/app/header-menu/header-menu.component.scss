@@ -56,3 +56,42 @@ menu {
         cursor: pointer;
     }
 }
+
+.header-menu-mobile-top {
+    display: none;
+
+    @media (max-width:1180px) {
+        display: block;
+    }
+}
+
+.header-menu-mobile {
+    z-index: 222;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(65, 72, 86, 0.9);
+    position: fixed;
+    top: 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-links {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 23px;
+    }
+}
+
+.burger-menu {
+    cursor: pointer;
+}
