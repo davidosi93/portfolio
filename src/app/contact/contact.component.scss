@@ -138,7 +138,7 @@
     }
 
     .input-bg-warning {
-        background: url('assets/img/contact/red-sign.png') no-repeat scroll 7px 7px !important;
+        background: url('^assets/img/contact/red-sign.png') no-repeat scroll 7px 7px !important;
         background-position: calc(100% - 20px) 10px !important;
     }
 
@@ -241,7 +241,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    background-image: url('assets/img/contact/purple-contact-shadow.png');
+    background-image: url('^assets/img/contact/purple-contact-shadow.png');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
@@ -253,7 +253,7 @@
 }
 
 .go-up-btn {
-    background-image: url('assets/img/contact/Go_up_button.png');
+    background-image: url('^assets/img/contact/Go_up_button.png');
     width: 39px;
     height: 39px;
     position: absolute;
@@ -263,7 +263,7 @@
     transition: all 125ms ease-in-out;
 
     &:hover {
-        background-image: url('assets/img/contact/go-up-button-blue.png');
+        background-image: url('^assets/img/contact/go-up-button-blue.png');
         transition: all 125ms ease-in-out;
     }
 }
