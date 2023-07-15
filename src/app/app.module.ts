@@ -13,7 +13,6 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderMenuMobileComponent } from './header-menu-mobile/header-menu-mobile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -27,8 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SkillsComponent,
     PortfolioComponent,
     ContactComponent,
-    FooterComponent,
-    HeaderMenuMobileComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

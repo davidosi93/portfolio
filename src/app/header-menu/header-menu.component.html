@@ -5,7 +5,7 @@
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
     </menu>
-    <img (click)="toggleMenu()" class="burger-menu" src="/assets/img/burger_menu.png">
+    <img (click)="toggleMenu()" class="burger-menu" *ngIf="burgerMenu" src="{{burgerMenu}}">
 </div>
 
 <div class="header-menu-mobile-top">

@@ -17,10 +17,38 @@
     </div>
 
     <form (submit)="sendMail()" ngNativeValidate #myForm class="contact-right-side">
-        <input required type="name" placeholder="Your name" #nameField>
-        <input required type="email" placeholder="Your email" #emailField>
-        <textarea required type="message" placeholder="Your message" #messageField></textarea>
-        <button #sendButton>Send message :)</button>
+        <div class="input-area">
+            <input required type="name" placeholder="Your name" #nameField (input)="onInput('name')"
+                (blur)="onBlur($event)" (focus)="onFocus($event, 'name')">
+
+            <span [class.transparent]="!showWarningName" translate>Your name is required</span>
+
+            <img *ngIf="showGreenCheckName" src="/assets/img/contact/green-sign.png">
+        </div>
+
+        <div class="input-area">
+            <input required type="email" placeholder="Your email" #emailField (input)="onInput('email')"
+                (blur)="onBlur($event)" (focus)="onFocus($event, 'email')">
+
+            <span [class.transparent]="!showWarningEmail" translate>Your email is required</span>
+
+            <img *ngIf="showGreenCheckEmail" src="/assets/img/contact/green-sign.png">
+        </div>
+
+        <div class="input-area">
+            <textarea required type="message" placeholder="Your message" #messageField (input)="onInput('message')"
+                (blur)="onBlur($event)" (focus)="onFocus($event, 'message')"></textarea>
+
+            <span [class.transparent]="!showWarningMessage" translate>Your message is empty</span>
+
+            <img *ngIf="showGreenCheckMessage" src="/assets/img/contact/green-sign.png">
+        </div>
+
+        <button #sendButton>
+            <span *ngIf="!showLoader && !emailSent" translate>Send Message :)</span>
+            <span *ngIf="emailSent && !showLoader">Thank You :) </span>
+            <div class="loader" *ngIf="showLoader && sendMail"></div>
+        </button>
     </form>
 
     <div class="purple-shadow"></div>

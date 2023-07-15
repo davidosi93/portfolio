@@ -12,10 +12,18 @@ import { slideInRightOnEnterAnimation, slideOutRightOnLeaveAnimation } from 'ang
 })
 export class HeaderMenuComponent {
   isMenuOpen: boolean = false;
+  burgerMenu: any = '/assets/img/burger_menu.png';
+  closeMenu: any = '/assets/img/close.png';
 
   constructor() { }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-  }
+    if (this.isMenuOpen) {
+      this.burgerMenu = this.closeMenu;
+    } else {
+      this.burgerMenu = '/assets/img/burger_menu.png';
+      this.closeMenu = '/assets/img/close.png';
+    }
+  }  
 }
