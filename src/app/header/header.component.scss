@@ -47,7 +47,7 @@
 
     @media (max-width: 1180px) {
         align-items: center;
-        height: 400px;
+        height: 68vh;
     }
 }
 
@@ -64,6 +64,7 @@
         margin: 0;
         box-sizing: border-box;
         padding-top: 2vh;
+        overflow-y: hidden;
 
         @media (max-width: 1180px) {
             font-size: 9vw;
@@ -103,6 +104,11 @@
     }
 }
 
+a {
+    text-decoration: none;
+    margin-top: 15px;
+}
+
 button {
     background-color: #00BEE8;
     border: none;
@@ -123,7 +129,6 @@ button {
     }
 
     @media (max-width: 1180px) {
-        margin-top: 5vh;
         width: 133px;
         height: 49px;
         font-size: 18px;

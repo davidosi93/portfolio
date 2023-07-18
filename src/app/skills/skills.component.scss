@@ -11,7 +11,7 @@
         padding: 0 5%;
         flex-direction: column-reverse;
         top: 10vh;
-        align-items: flex-start;
+        align-items: center;
         height: unset;
     }
 }
@@ -173,9 +173,6 @@
 
 .mobile-button {
     display: none;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     z-index: 2;
     margin-top: 4%;
 

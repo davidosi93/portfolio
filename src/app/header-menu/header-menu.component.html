@@ -11,10 +11,10 @@
 <div class="header-menu-mobile-top">
     <div class="header-menu-mobile" *ngIf="isMenuOpen" [@slideInRightOnEnter] [@slideOutRightOnLeave]>
         <div class="menu-links">
-            <a href="#about-me">About me</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a href="#about-me" (click)="toggleMenu()">About me</a>
+            <a href="#skills" (click)="toggleMenu()">Skills</a>
+            <a href="#portfolio" (click)="toggleMenu()">Portfolio</a>
+            <a href="#contact" (click)="toggleMenu()">Contact</a>
         </div>
     </div>
 </div>

@@ -48,6 +48,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    gap: 5%;
 
     @media (max-width: 1180px) {
         height: unset;
@@ -79,8 +80,12 @@
         color: white;
         margin: 0;
 
-        @media (max-width: 400px) {
+        @media (max-width: 450px) {
             font-size: 23px;
+        }
+
+        @media (max-width: 330px) {
+            font-size: 20px;
         }
     }
 
@@ -116,6 +121,7 @@
 
     @media (max-width: 1180px) {
         width: 100%;
+        gap: 14px;
     }
 
     input {
@@ -131,33 +137,37 @@
         &:hover {
             border-color: #1CE6B6;
         }
-
-        &:focus {
-            border: 1px solid #E61C40;
-        }
     }
 
-    .input-bg-warning {
-        background: url('^assets/img/contact/red-sign.png') no-repeat scroll 7px 7px !important;
-        background-position: calc(100% - 20px) 10px !important;
+    .visible {
+        visibility: visible !important
     }
 
-    .transparent {
-        color: transparent;
+    .hide {
+        margin: 10px;
+        color: #E61C40;
+        visibility: hidden;
     }
 
     input::placeholder {
         color: white;
     }
 
-    input.has-content,
-    textarea.has-content {
+    .border-green {
         border-color: green !important;
+
+        &:hover {
+            border: 1px solid green;
+        }
+
     }
 
-    input.empty-focused,
-    textarea.empty-focused {
-        border-color: #E61C40 !important;
+    .border-red {
+        border-color: #E61C40;
+
+        &:hover {
+            border: 1px solid #E61C40;
+        }
     }
 
     textarea {
@@ -222,6 +232,7 @@
         position: absolute;
         right: 21px;
         top: 11px;
+        visibility: hidden;
     }
 }
 
@@ -233,6 +244,16 @@
     border: 3px solid transparent;
     border-top-color: #fff;
     animation: loaderAnimation 2s ease infinite;
+}
+
+@keyframes loaderAnimation {
+    0% {
+        transform: rotate(0turn);
+    }
+
+    100% {
+        transform: rotate(2turn);
+    }
 }
 
 .purple-shadow {
