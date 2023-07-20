@@ -1,14 +1,30 @@
 <div class="footer">
     <div class="imprint">
         <h2>David Osipov</h2>
-        <p>Impressum</p>
+        <p (click)="toggleImprint()">Impressum</p>
     </div>
 
     <span>© David Osipov 2023</span>
 
     <div class="icons">
         <a href="https://github.com/davidosi93" target="_blank"><img src="assets/img/reference-icons/github.png"></a>
-        <a href=""><img src="assets/img/reference-icons/mail.png"></a>
-        <a href=""><img src="assets/img/reference-icons/linkedin.png"></a>
+        <a href="https://www.xing.com/profile/David_Osipov/cv" target="_blank"><img src="assets/img/reference-icons/mail.png"></a>
+        <a href="https://www.linkedin.com/in/david-osipov-513949284/" target="_blank"><img src="assets/img/reference-icons/linkedin.png"></a>
     </div>
+</div>
+
+<div class="imprint-text-div" *ngIf="isImprintOpen" [@slideInUpOnEnter] [@slideOutDownOnLeave]>
+    <div class="imprint-header">
+        <img (click)="toggleImprint()" src="assets/img/close.png">
+        <h2>Impressum</h2>
+    </div>
+    <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+    <p>David Osipov<br />
+        Brunnenstra&szlig;e 4<br />
+        90574 Ro&szlig;tal</p>
+    <h2>Kontakt</h2>
+    <p>Telefon: 017638664924<br />
+        Telefax: +49 (0) 123 44 55 99<br />
+        E-Mail: d.osipov93@googlemail.com</p>
+    <p>Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
 </div>

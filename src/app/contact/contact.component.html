@@ -18,7 +18,7 @@
 
     <form (ngSubmit)="sendMail()" class="contact-right-side">
         <div class="input-area">
-            <input name="name" (focus)="setFocus('name')" placeholder="Your name" type="text" [(ngModel)]="name"
+            <input required name="name" (focus)="setFocus('name')" placeholder="Your name" type="text" [(ngModel)]="name"
                 (ngModelChange)="changeValue($event, 'name')" [class.border-red]="name_active && name.length == 0"
                 [class.border-green]="name_active && name.length > 0">
             <img [class.visible]="name_active && name.length == 0" src="assets/img/contact/red-sign.png">
@@ -27,7 +27,7 @@
         </div>
 
         <div class="input-area">
-            <input name="email" (focus)="setFocus('email')" placeholder="Your email" type="email" ngModel email="true" 
+            <input required name="email" (focus)="setFocus('email')" placeholder="Your email" type="email" ngModel email="true" 
                 [(ngModel)]="email_text" (ngModelChange)="changeValue($event, 'email')"
                 [class.border-red]="email_active || !email_valid && email_active"
                 [class.border-green]="email_active && email_valid">
@@ -38,7 +38,7 @@
         </div>
 
         <div class="input-area">
-            <textarea (focus)="setFocus('message')" placeholder="Your message" type="textarea" name='message'
+            <textarea required (focus)="setFocus('message')" placeholder="Your message" type="textarea" name='message'
                 [(ngModel)]="message" (ngModelChange)="changeValue($event, 'message')"
                 [class.border-red]="message_active && message.length == 0"
                 [class.border-green]="message_active && message.length > 0"></textarea>

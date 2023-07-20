@@ -21,3 +21,24 @@ app-header-menu-mobile {
         display: block;
     }
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #141D2F;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #3637B4;
+    border-radius: 4px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6161d1;
+  }
