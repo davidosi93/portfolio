@@ -96,11 +96,18 @@
 .i-am {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-weight: 400;
     font-size: 5vw;
 
     @media (max-width: 1180px) {
         font-size: 7vw;
+    }
+}
+
+.iam {
+    font-size: 3.25vw;
+
+    @media (max-width: 1180px) {
+        font-size: 4.25vw;
     }
 }
 

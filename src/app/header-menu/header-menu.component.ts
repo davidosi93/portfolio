@@ -16,9 +16,10 @@ export class HeaderMenuComponent {
   burgerMenu: any = 'assets/img/burger_menu.png';
   closeMenu: any = 'assets/img/close.png';
   isGerman: boolean = false;
+  germanFlag: any = 'assets/img/germany.png';
+  ukFlag: any = 'assets/img/uk.png';
 
-  constructor(public translate: TranslateService) {
-  }
+  constructor(public translate: TranslateService) { }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -27,6 +28,17 @@ export class HeaderMenuComponent {
     } else {
       this.burgerMenu = 'assets/img/burger_menu.png';
       this.closeMenu = 'assets/img/close.png';
+    }
+  }
+
+  changeLang() {
+    this.isGerman = !this.isGerman;
+    this.translate.use(this.isGerman ? 'de' : 'en');
+    if (this.isGerman) {
+      this.germanFlag = this.ukFlag;
+    } else {
+      this.germanFlag = 'assets/img/germany.png';
+      this.ukFlag = 'assets/img/uk.png';
     }
   }
 }

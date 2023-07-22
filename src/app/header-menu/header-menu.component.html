@@ -4,12 +4,12 @@
         <a href="#about-me" translate>About me</a>
         <a href="#skills" translate>Skills</a>
         <a href="#portfolio">Portfolio</a>
-        <img (click)="translate.use('de')" src="assets/img/germany.png">
+        <img (click)="changeLang()" *ngIf="germanFlag" src="{{germanFlag}}">
     </menu>
     <div class="mobile-icons-visibility">
         <div class="mobile-icons">
             <img (click)="toggleMenu()" class="burger-menu" *ngIf="burgerMenu" src="{{burgerMenu}}">
-            <img (click)="translate.use('de')" src="assets/img/germany.png">
+            <img (click)="changeLang()" *ngIf="germanFlag" src="{{germanFlag}}">
         </div>
     </div>
 </div>
