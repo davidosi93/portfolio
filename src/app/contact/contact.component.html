@@ -1,6 +1,6 @@
 <div id="contact" class="contact">
     <div class="contact-header">
-        <h2>Contact</h2>
+        <h2 translate>Contact</h2>
         <div class="border"></div>
     </div>
 </div>
@@ -9,16 +9,16 @@
     <div class="contact-left-side">
         <div class="contact-left-side-header">
             <div class="border-2"></div>
-            <h3>Got a problem to solve?</h3>
+            <h3 translate>Got a problem to solve?</h3>
         </div>
-        <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
+        <p translate>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
             projects with my work.</p>
-        <p>Need a Frontend developer? <b>Contact me!</b></p>
+        <p translate>Need a Frontend developer? <b translate>Contact me!</b></p>
     </div>
 
     <form (ngSubmit)="sendMail()" class="contact-right-side">
         <div class="input-area">
-            <input required name="name" (focus)="setFocus('name')" placeholder="Your name" type="text" [(ngModel)]="name"
+            <input required name="name" (focus)="setFocus('name')" placeholder="{{'Your name' | translate}}" type="text" [(ngModel)]="name"
                 (ngModelChange)="changeValue($event, 'name')" [class.border-red]="name_active && name.length == 0"
                 [class.border-green]="name_active && name.length > 0">
             <img [class.visible]="name_active && name.length == 0" src="assets/img/contact/red-sign.png">
@@ -27,7 +27,7 @@
         </div>
 
         <div class="input-area">
-            <input required name="email" (focus)="setFocus('email')" placeholder="Your email" type="email" ngModel email="true" 
+            <input required name="email" (focus)="setFocus('email')" placeholder="{{'Your email' | translate}}" type="email" ngModel email="true" 
                 [(ngModel)]="email_text" (ngModelChange)="changeValue($event, 'email')"
                 [class.border-red]="email_active || !email_valid && email_active"
                 [class.border-green]="email_active && email_valid">
@@ -38,7 +38,7 @@
         </div>
 
         <div class="input-area">
-            <textarea required (focus)="setFocus('message')" placeholder="Your message" type="textarea" name='message'
+            <textarea required (focus)="setFocus('message')" placeholder="{{'Your message' | translate}}" type="textarea" name='message'
                 [(ngModel)]="message" (ngModelChange)="changeValue($event, 'message')"
                 [class.border-red]="message_active && message.length == 0"
                 [class.border-green]="message_active && message.length > 0"></textarea>
@@ -48,8 +48,8 @@
         </div>
 
         <button #sendButton>
-            <span *ngIf="!showLoader && !emailSent">Send Message :)</span>
-            <span *ngIf="emailSent && !showLoader">Thank You :) </span>
+            <span *ngIf="!showLoader && !emailSent" translate>Send Message :)</span>
+            <span *ngIf="emailSent && !showLoader" translate>Thank You :) </span>
             <div class="loader" *ngIf="showLoader && sendMail"></div>
         </button>
     </form>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { slideInRightOnEnterAnimation, slideOutRightOnLeaveAnimation } from 'angular-animations';
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-header-menu',
@@ -14,8 +15,10 @@ export class HeaderMenuComponent {
   isMenuOpen: boolean = false;
   burgerMenu: any = 'assets/img/burger_menu.png';
   closeMenu: any = 'assets/img/close.png';
+  isGerman: boolean = false;
 
-  constructor() { }
+  constructor(public translate: TranslateService) {
+  }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -25,5 +28,5 @@ export class HeaderMenuComponent {
       this.burgerMenu = 'assets/img/burger_menu.png';
       this.closeMenu = 'assets/img/close.png';
     }
-  }  
+  }
 }

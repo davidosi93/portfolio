@@ -29,13 +29,17 @@
 }
 
 menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     a {
         text-decoration: none;
-        margin-left: 30px;
         color: white;
         font-size: 23px !important;
         font-weight: 300 !important;
         transition: all 125ms ease-in-out;
+        margin-left: 15px;
 
         &:hover {
             color: #00BEE8;
@@ -43,8 +47,42 @@ menu {
         }
     }
 
+    img {
+        cursor: pointer;
+        transition: all 125ms ease-in-out;
+        margin-left: 20px;
+
+        &:hover {
+            opacity: 0.7;
+            transition: all 125ms ease-in-out;
+        }
+    }
+
     @media (max-width: 1180px) {
         display: none;
+    }
+}
+
+.mobile-icons-visibility {
+    display: none;
+
+    @media (max-width: 1180px) {
+        display: block;
+    }
+}
+
+.mobile-icons {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+
+    img {
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
     }
 }
 
@@ -72,7 +110,7 @@ menu {
     background-color: rgba(20, 29, 47, 0.9);
     position: fixed;
     top: 100px;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,20 +1,26 @@
 <div class="header-menu">
     <a href="#">David Osipov</a>
     <menu>
-        <a href="#about-me">About me</a>
-        <a href="#skills">Skills</a>
+        <a href="#about-me" translate>About me</a>
+        <a href="#skills" translate>Skills</a>
         <a href="#portfolio">Portfolio</a>
+        <img (click)="translate.use('de')" src="assets/img/germany.png">
     </menu>
-    <img (click)="toggleMenu()" class="burger-menu" *ngIf="burgerMenu" src="{{burgerMenu}}">
+    <div class="mobile-icons-visibility">
+        <div class="mobile-icons">
+            <img (click)="toggleMenu()" class="burger-menu" *ngIf="burgerMenu" src="{{burgerMenu}}">
+            <img (click)="translate.use('de')" src="assets/img/germany.png">
+        </div>
+    </div>
 </div>
 
 <div class="header-menu-mobile-top">
     <div class="header-menu-mobile" *ngIf="isMenuOpen" [@slideInRightOnEnter] [@slideOutRightOnLeave]>
         <div class="menu-links">
-            <a href="#about-me" (click)="toggleMenu()">About me</a>
-            <a href="#skills" (click)="toggleMenu()">Skills</a>
+            <a href="#about-me" (click)="toggleMenu()" translate>About me</a>
+            <a href="#skills" (click)="toggleMenu()" translate>Skills</a>
             <a href="#portfolio" (click)="toggleMenu()">Portfolio</a>
-            <a href="#contact" (click)="toggleMenu()">Contact</a>
+            <a href="#contact" (click)="toggleMenu()" translate>Contact</a>
         </div>
     </div>
 </div>
