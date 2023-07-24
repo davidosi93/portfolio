@@ -1,44 +1,44 @@
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #141D2F;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #141D2F;
+  overflow-x: hidden;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 app-header-menu-mobile {
-    display: none;
+  display: none;
 
-    @media (max-width: 1180px) {
-        display: block;
-    }
+  @media (max-width: 1180px) {
+    display: block;
+  }
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #141D2F;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #3637B4;
-    border-radius: 4px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #6161d1;
-  }
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #141D2F;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3637B4;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6161d1;
+}

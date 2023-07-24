@@ -5,6 +5,13 @@
     padding: 0 10%;
     position: relative;
 
+    :target::before {
+        content: '';
+        display: block;
+        height: 40px;
+        margin: 40px 0 0 0;
+    }
+
     @media (max-width: 1180px) {
         padding: 0 5%;
         flex-direction: column-reverse;
@@ -34,7 +41,8 @@
     @media (max-width: 1180px) {
         width: 100%;
         padding-top: 50px;
-    }}
+    }
+}
 
 span {
     color: white;
