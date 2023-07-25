@@ -17,5 +17,4 @@ export class FooterComponent {
   toggleImprint() {
     this.isImprintOpen = !this.isImprintOpen;
   }
-
 }

@@ -63,7 +63,7 @@ export class ContactComponent {
     setTimeout(() => {
       this.showLoader = false;
       this.emailSent = true;
-    }, 2100);
+    }, 1100);
     setTimeout(() => {
       this.name_active = false
       this.email_active = false

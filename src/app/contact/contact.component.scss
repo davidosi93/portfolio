@@ -38,8 +38,12 @@
     right: 0;
     width: 30%;
 
+    @media (max-width: 780px) {
+        width: 15%;
+    }
+
     @media (max-width: 430px) {
-        width: 20%;
+        width: 18%;
     }
 }
 
