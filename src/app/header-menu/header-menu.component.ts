@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { slideInRightOnEnterAnimation, slideOutRightOnLeaveAnimation } from 'angular-animations';
 import { TranslateService } from "@ngx-translate/core";
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-header-menu',
@@ -19,7 +20,10 @@ export class HeaderMenuComponent {
   germanFlag: any = 'assets/img/germany.png';
   ukFlag: any = 'assets/img/uk.png';
 
-  constructor(public translate: TranslateService) { }
+  constructor(
+    public translate: TranslateService,
+    private scroller: ViewportScroller
+  ) { }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -40,5 +44,9 @@ export class HeaderMenuComponent {
       this.germanFlag = 'assets/img/germany.png';
       this.ukFlag = 'assets/img/uk.png';
     }
+  }
+
+  scrollToSection(sectionId: string): void {
+    this.scroller.scrollToAnchor(`${sectionId}`);
   }
 }

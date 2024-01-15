@@ -3,10 +3,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25% 10% 0% 10%;
+    padding: 0 10%;
+    margin-bottom: -8%;
     position: relative;
-    top: -100px;
-    scroll-margin-top: -8rem;
 
     @media (max-width: 1180px) {
         padding: 0 5%;

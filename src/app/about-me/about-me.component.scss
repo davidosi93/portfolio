@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
+    padding: 5% 10% 0 10%;
     position: relative;
 
     :target::before {
@@ -80,20 +80,23 @@ li {
         @media (max-width: 600px) {
             width: 80vw;
             height: auto;
-        }
+        }   
     }
 }
 
 .floating-background {
     z-index: -4;
     position: absolute;
-    width: 100%;
+    width: 100vw;
     left: 0;
-    right: 0;
-    top: 620px;
+    top: 72vh;
+
+    @media (max-width: 1180px) {
+        top: 52vh;
+    }
 
     @media (max-width: 800px) {
-        height: 30vh;
+        top: 57vh;
     }
 
     @media (max-width: 500px) {

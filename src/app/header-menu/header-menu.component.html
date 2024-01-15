@@ -1,9 +1,9 @@
 <div class="header-menu">
-    <a href="#"><img class="logo" src="assets/img/david osipov-04-neu.png"></a>
+    <a (click)="scrollToSection('header')"><img class="logo" src="assets/img/david osipov-04-neu.png"></a>
     <menu>
-        <a href="#about-me" translate>About me</a>
-        <a href="#skills" translate>Skills</a>
-        <a href="#portfolio">Portfolio</a>
+        <a translate (click)="scrollToSection('aboutMeSection')">About me</a>
+        <a translate (click)="scrollToSection('skills')">Skills</a>
+        <a (click)="scrollToSection('portfolio')">Portfolio</a>
         <img (click)="changeLang()" *ngIf="germanFlag" src="{{germanFlag}}">
     </menu>
     <div class="mobile-icons-visibility">
@@ -17,10 +17,10 @@
 <div class="header-menu-mobile-top">
     <div class="header-menu-mobile" *ngIf="isMenuOpen" [@slideInRightOnEnter] [@slideOutRightOnLeave]>
         <div class="menu-links">
-            <a href="#about-me" (click)="toggleMenu()" translate>About me</a>
-            <a href="#skills" (click)="toggleMenu()" translate>Skills</a>
-            <a href="#portfolio" (click)="toggleMenu()">Portfolio</a>
-            <a href="#contact" (click)="toggleMenu()" translate>Contact</a>
+            <a (click)="toggleMenu()" (click)="scrollToSection('aboutMeSection')" translate>About me</a>
+            <a (click)="toggleMenu()" (click)="scrollToSection('skills')" translate>Skills</a>
+            <a (click)="toggleMenu()" (click)="scrollToSection('portfolio')">Portfolio</a>
+            <a (click)="toggleMenu()" (click)="scrollToSection('contact')" translate>Contact</a>
         </div>
     </div>
 </div>

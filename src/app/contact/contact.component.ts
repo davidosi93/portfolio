@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 
 export class ContactComponent {
 
-  constructor() { }
+  constructor(private scroller: ViewportScroller) { }
 
   [x: string]: any;
 
@@ -50,8 +51,9 @@ export class ContactComponent {
     fd.append('name', this.name);
     fd.append('email', this.email_text);
     fd.append('message', this.message);
-    await fetch('https://david-osipov.developerakademie.net/send_mail/send_mail.php', {
+    await fetch('https://formspree.io/f/xqkrakvj', {
       method: "POST",
+      mode: "no-cors",
       body: fd
     });
 
@@ -75,5 +77,9 @@ export class ContactComponent {
       this.emailSent = false;
       this.form_valid = false;
     }, 3100);
+  }
+
+  scrollToSection(sectionId: string): void {
+    this.scroller.scrollToAnchor(`${sectionId}`);
   }
 }
