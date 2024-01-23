@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5% 10% 0 10%;
+    padding: 0 10% 0 10%;
     position: relative;
 
     :target::before {
@@ -17,20 +17,20 @@
         flex-direction: column-reverse;
     }
 
+    @media (max-width: 400px) {
+        margin-top: 20px;
+    }
+
     h2 {
         color: white;
         font-weight: 700;
-        font-size: 90px;
+        font-size: 7vh;
         margin-top: 5%;
         margin-bottom: 0;
         width: 110%;
 
         @media (max-width: 1250px) {
-            font-size: 6vw;
-        }
-
-        @media (max-width: 1180px) {
-            font-size: 11vw;
+            font-size: 6vh;
         }
     }
 }
@@ -40,16 +40,39 @@
 
     @media (max-width: 1180px) {
         width: 100%;
-        padding-top: 50px;
+        z-index: 3;
+        margin-top: -250px;
     }
-}
 
-span {
-    color: white;
-}
+    @media (max-width: 800px) {
+        margin-top: -320px;
+    }
 
-li {
-    list-style: none;
+    @media (max-width: 450px) {
+        margin-top: -380px;
+    }
+
+    @media (max-width: 389px) {
+        margin-top: -200px;
+    }
+
+    span {
+        color: white;
+
+        @media (max-width: 450px) {
+            font-size: 14px;
+        }
+    }
+
+    li {
+        list-style: none;
+
+        img {
+            @media (max-width: 500px) {
+                width: 35px;
+            }
+        }
+    }
 }
 
 .about-me-textarea {
@@ -62,34 +85,67 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 24px;
-    padding-left: 30px;
 
     p {
-        flex-basis: 80%;
+        flex-basis: 85%;
+        margin-bottom: 0;
+
+        @media (max-width: 450px) {
+            font-size: 14px;
+        }
     }
 }
 
 .picture {
+    position: relative;
     background: url('^assets/img/image-background-shadow.png');
     background-position: center;
-    background-size: cover;
-    margin-top: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    width: 60vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    @media (max-width: 1600px) {
+        width: 40vw;
+        height: 86vh;
+    }
+
+    @media (max-width: 1180px) {
+        width: 100vw;
+        height: 100vh;
+        margin-top: unset;
+    }
+
+    @media (max-width: 800px) {
+        background-position: center top;
+    }
 
     img {
+        height: 600px;
+        z-index: -1;
+
+        @media (max-width: 1180px) {
+            margin-bottom: 250px;
+        }
+
         @media (max-width: 600px) {
             width: 80vw;
             height: auto;
-        }   
+        }
     }
 }
 
 .floating-background {
-    z-index: -4;
+    z-index: 2;
     position: absolute;
     width: 100vw;
     left: 0;
-    top: 72vh;
+    top: 65vh;
 
     @media (max-width: 1180px) {
         top: 52vh;
@@ -100,10 +156,19 @@ li {
     }
 
     @media (max-width: 500px) {
-        top: 31%;
+        top: 35%;
+        height: 450px;
     }
 
     @media (max-width: 400px) {
-        top: 28%;
+        top: 36%;
+    }
+
+    @media (max-width: 399px) {
+        top: 35%;
+    }
+
+    @media (max-width: 361px) {
+        top: 30%;
     }
 }

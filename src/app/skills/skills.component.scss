@@ -1,19 +1,20 @@
 .skills {
-    height: 100vh;
+    height: 110vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
     margin-bottom: -8%;
     position: relative;
+    z-index: 2;
+    // margin-top: 135px;
 
     @media (max-width: 1180px) {
         padding: 0 5%;
         flex-direction: column-reverse;
-        top: 10vh;
         align-items: center;
         height: unset;
-        scroll-margin-top: 7rem;
+        margin-top: 7vh;
     }
 }
 
