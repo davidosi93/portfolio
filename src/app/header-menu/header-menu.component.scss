@@ -14,11 +14,19 @@
     @media (max-width: 1180px) {
         padding: 0 5%;
     }
+
+    @media (max-width: 600px) {
+        height: 70px;
+    }
 }
 
 .logo {
     height: 80px;
     cursor: pointer;
+
+    @media (max-width: 600px) {
+        height: 50px;
+    }
 }
 
 menu {
@@ -108,6 +116,10 @@ menu {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 600px) {
+        top: 70px;
+    }
 }
 
 .menu-links {
