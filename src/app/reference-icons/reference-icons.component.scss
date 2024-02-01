@@ -45,25 +45,9 @@
 
 .icons-row {
     justify-content: space-between;
-    width: 12vw;
+    gap: 1rem;
     display: flex;
     align-items: center;
-
-    @media (max-width: 1180px) {
-        width: 14vw;
-    }
-
-    @media (max-width: 880px) {
-        width: 16vw;
-    }
-
-    @media (max-width: 700px) {
-        width: 30vw;
-    }
-
-    @media (max-width: 400px) {
-        width: 50vw;
-    }
 }
 
 .scroll-down {
