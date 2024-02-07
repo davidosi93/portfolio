@@ -1,6 +1,6 @@
 .header-menu {
-    padding: 0 10%;
     height: 100px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,6 +10,7 @@
     right: 0;
     z-index: 40;
     background-color: #141D2F;
+    padding: 0 10%;
 
     @media (max-width: 1180px) {
         padding: 0 5%;
@@ -106,7 +107,7 @@ menu {
 }
 
 .header-menu-mobile {
-    z-index: 222;
+    z-index: 666;
     width: 100vw;
     height: 100vh;
     background-color: rgba(20, 29, 47, 0.9);

@@ -52,8 +52,12 @@
             <span *ngIf="emailSent && !showLoader" translate>Thank You :) </span>
             <div class="loader" *ngIf="showLoader && sendMail"></div>
         </button>
+
+        <a class="go-up-btn" (click)="scrollToSection('header')"></a>
     </form>
 
-    <div class="purple-shadow"></div>
-    <a class="go-up-btn" (click)="scrollToSection('header')"></a>
+    <div class="purple-shadow">
+        <img src="assets/img/contact/purple-contact-shadow.png">
+    </div>
+    
 </div>

@@ -1,16 +1,16 @@
-body {
-  margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
-  background-color: #141D2F;
-  overflow-x: hidden;
-}
-
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1956px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  background-color: #141D2F;
   overflow-x: hidden;
 }
 

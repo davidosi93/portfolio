@@ -3,11 +3,12 @@
     display: flex;
     justify-content: center;
     padding: 0 10%;
-    position: relative;
+    padding-top: 50px;
     scroll-margin-top: 6rem;
 
     @media (max-width: 1180px) {
         padding: 0 5%;
+        padding-top: 50px;
     }
 }
 
@@ -50,7 +51,7 @@
 .contact-content {
     height: 600px;
     padding: 0 10%;
-    position: relative;
+    // position: relative;
     display: flex;
     justify-content: space-between;
     gap: 5%;
@@ -123,6 +124,8 @@
     flex-direction: column;
     align-items: center;
     gap: 35px;
+    position: relative;
+    flex: 1;
 
     @media (max-width: 1180px) {
         width: 100%;
@@ -262,20 +265,9 @@
 }
 
 .purple-shadow {
-    width: 867px;
-    height: 500px;
     position: absolute;
     right: 0;
-    bottom: 0;
-    background-image: url('^assets/img/contact/purple-contact-shadow.png');
-    background-size: cover;
-    background-repeat: no-repeat;
     z-index: -1;
-
-    @media (max-width: 1180px) {
-        bottom: 0;
-        top: unset;
-    }
 }
 
 .go-up-btn {
@@ -283,10 +275,14 @@
     width: 39px;
     height: 39px;
     position: absolute;
-    right: 10%;
-    bottom: 30px;
+    right: 0;
+    bottom: 60px;
     cursor: pointer;
     transition: all 125ms ease-in-out;
+
+    @media (max-width: 1180px) {
+        bottom: -60px;
+    }
 
     &:hover {
         background-image: url('^assets/img/contact/go-up-button-blue.png');

@@ -2,11 +2,15 @@
     padding: 0 10%;
     height: 291px;
     border-top: 4px solid #00BEE8;
+    background-color: #141D2F;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 555;
 
     @media (max-width: 800px) {
         padding: 0 5%;
