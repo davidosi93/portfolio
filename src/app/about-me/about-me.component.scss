@@ -111,10 +111,6 @@
         &__me {
             background-position: center top;
             background-size: contain;
-
-            img {
-                height: 500px;
-            }
         }
     }
 }
@@ -122,8 +118,7 @@
 @media (max-width: 1250px) {
     .about {
         height: unset;
-        overflow: unset;
-        padding-top: 80px;
+        overflow: visible;
 
         &__wrapper {
             flex-direction: column-reverse;
