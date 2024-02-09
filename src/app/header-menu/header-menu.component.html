@@ -1,18 +1,20 @@
-<div class="header-menu">
-    <a (click)="scrollToSection('header')"><img class="logo" src="assets/img/david osipov-04-neu.png"></a>
-    <menu>
-        <a translate (click)="scrollToSection('aboutMeSection')">About me</a>
-        <a translate (click)="scrollToSection('skills')">Skills</a>
-        <a (click)="scrollToSection('portfolio')">Portfolio</a>
-        <img (click)="changeLang()" *ngIf="germanFlag" src="{{germanFlag}}">
-    </menu>
-    <div class="mobile-icons-visibility">
-        <div class="mobile-icons">
-            <img (click)="toggleMenu()" class="burger-menu" *ngIf="burgerMenu" src="{{burgerMenu}}">
+<header>
+    <div class="header-menu">
+        <a (click)="scrollToSection('header')"><img class="logo" src="assets/img/david osipov-04-neu.png"></a>
+        <menu>
+            <a translate (click)="scrollToSection('aboutMeSection')">About me</a>
+            <a translate (click)="scrollToSection('skills')">Skills</a>
+            <a (click)="scrollToSection('portfolio')">Portfolio</a>
             <img (click)="changeLang()" *ngIf="germanFlag" src="{{germanFlag}}">
+        </menu>
+        <div class="mobile-icons-visibility">
+            <div class="mobile-icons">
+                <img (click)="toggleMenu()" class="burger-menu" *ngIf="burgerMenu" src="{{burgerMenu}}">
+                <img (click)="changeLang()" *ngIf="germanFlag" src="{{germanFlag}}">
+            </div>
         </div>
     </div>
-</div>
+</header>
 
 <div class="header-menu-mobile-top">
     <div class="header-menu-mobile" *ngIf="isMenuOpen" [@slideInRightOnEnter] [@slideOutRightOnLeave]>
