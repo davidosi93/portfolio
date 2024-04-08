@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { slideInRightOnEnterAnimation, slideOutRightOnLeaveAnimation } from 'angular-animations';
 import { TranslateService } from "@ngx-translate/core";
 import { ViewportScroller } from '@angular/common';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-header-menu',
@@ -22,7 +23,8 @@ export class HeaderMenuComponent {
 
   constructor(
     public translate: TranslateService,
-    private scroller: ViewportScroller
+    private scroller: ViewportScroller,
+    public contact: ContactComponent
   ) { }
 
   toggleMenu() {
@@ -48,5 +50,6 @@ export class HeaderMenuComponent {
 
   scrollToSection(sectionId: string): void {
     this.scroller.scrollToAnchor(`${sectionId}`);
+    this.contact.togglePrivacy();
   }
 }
