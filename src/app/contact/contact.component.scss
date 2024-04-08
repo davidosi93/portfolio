@@ -126,7 +126,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
     position: relative;
     flex: 1;
 
@@ -247,6 +246,42 @@
     }
 }
 
+.textarea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.textarea::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.privacypolicy {
+    gap: 10px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        display: flex;
+        margin: 0 0 20px 0;
+        color: #fff;
+    }
+
+    p {
+        margin: 0 0 0 4px;
+        color: #00BEE8;
+        cursor: pointer;
+    }
+}
+
+.checkbox {
+    width: unset !important;
+    height: unset !important;
+    margin: 0 0 20px 0;
+}
+
 .loader {
     pointer-events: none;
     width: 30px;
@@ -290,5 +325,33 @@
     &:hover {
         background-image: url('^assets/img/contact/go-up-button-blue.png');
         transition: all 125ms ease-in-out;
+    }
+}
+
+.privacy {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #141D2F;
+    color: #fff;
+    padding: 0 10% 291px 10%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    @media (max-width: 1180px) {
+        padding: 0 5% 200px 5%;
+    }
+
+    @media (max-width: 600px) {
+        top: 70px;
+    }
+
+    img {
+        cursor: pointer;
+        position: fixed;
+        top: 7rem;
+        right: 1rem;
     }
 }

@@ -1,15 +1,27 @@
 import { ViewportScroller } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Injectable, Renderer2 } from '@angular/core';
+import { slideInUpOnEnterAnimation, slideOutDownOnLeaveAnimation } from 'angular-animations';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  animations: [
+    slideInUpOnEnterAnimation({ duration: 300 }),
+    slideOutDownOnLeaveAnimation({ duration: 500 })
+  ]
+})
+
+@Injectable({
+  providedIn: 'root'
 })
 
 export class ContactComponent {
 
-  constructor(private scroller: ViewportScroller) { }
+  constructor(
+    private scroller: ViewportScroller,
+    private renderer: Renderer2,
+  ) { }
 
   [x: string]: any;
 
@@ -25,6 +37,8 @@ export class ContactComponent {
   form_valid: boolean = false;
   showLoader = false;
   emailSent = false;
+  checkBoxClicked: boolean = false;
+  isPrivacyOpen: boolean = false;
 
 
   changeValue(value: any, inputfield: string) {
@@ -34,8 +48,8 @@ export class ContactComponent {
       this.email_valid = this.regex.test(value);
     }
     if (inputfield == 'message') this.message = value;
-    if (this.email_valid && this.name.length > 1 && this.message.length > 1) this.form_valid = true;
-    if (!this.email_valid || this.name.length < 1 || this.message.length < 1) this.form_valid = false;
+    if (this.email_valid && this.name.length > 1 && this.message.length > 1 && this.checkBoxClicked) this.form_valid = true;
+    if (!this.email_valid || this.name.length < 1 || this.message.length < 1 && !this.checkBoxClicked) this.form_valid = false;
   }
 
   setFocus(inputfield: string) {
@@ -45,7 +59,7 @@ export class ContactComponent {
   }
 
   async sendMail() {
-    if (!this.email_valid || this.name.length < 1 || this.message.length < 1) return;
+    if (!this.email_valid || this.name.length < 1 || this.message.length < 1 || !this.checkBoxClicked) return;
     this.startAnimation();
     let fd = new FormData();
     fd.append('name', this.name);
@@ -76,7 +90,21 @@ export class ContactComponent {
       this.showLoader = false;
       this.emailSent = false;
       this.form_valid = false;
+      this.checkBoxClicked = false;
     }, 3100);
+  }
+
+  togglePrivacy() {
+    this.isPrivacyOpen = !this.isPrivacyOpen;
+    this.checkScroll();
+  }
+
+  checkScroll() {
+    if (this.isPrivacyOpen) {
+      this.renderer.setStyle(document.body, 'overflow', 'hidden');
+    } else {
+      this.renderer.removeStyle(document.body, 'overflow');
+    }
   }
 
   scrollToSection(sectionId: string): void {

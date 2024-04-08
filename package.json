@@ -13,6 +13,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.0.0",
+    "@angular/cdk": "^16.2.14",
     "@angular/common": "^16.0.0",
     "@angular/compiler": "^16.0.0",
     "@angular/core": "^16.0.0",
@@ -24,13 +25,14 @@
     "@ngx-translate/http-loader": "^8.0.0",
     "angular-animations": "^0.11.0",
     "aos": "^2.3.4",
+    "postcss": "^8.4.31",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^16.0.5",
-    "@angular/cli": "~16.0.5",
+    "@angular-devkit/build-angular": "^17.0.10",
+    "@angular/cli": "^16.2.13",
     "@angular/compiler-cli": "^16.0.0",
     "@types/aos": "^3.0.4",
     "@types/jasmine": "~4.3.0",
